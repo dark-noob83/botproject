@@ -26,16 +26,18 @@ bot.on('message',ctx=>{
                 g++;
             }
         }
-        if (g!=0){
+        if (g==0){
             db.push({
                 name:ctx.message.from.id,
                 count:1
             })
         }
-        console.log(ctx.message.from)
+        
+        
         for (let i = 0; i< db.length; i++) {
+            
             const element = db[i];
-            console.log(element)
+            console.log(element.count)
         }
     }
 })
