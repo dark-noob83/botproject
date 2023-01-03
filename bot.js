@@ -7,6 +7,7 @@ const keyboard = Keyboard.make([
     ['پروفایل من👤'],
     ['تماس با مدیر📞'], 
     ['ثبت نام 📜'],
+    ['ثبت تبلیغ🖋️','امار تبلیغات🔥','فوروارد همگانی🧷'],
 ])
 // start bot
 bot.start(ctx=>{
@@ -38,6 +39,7 @@ bot.hears('پروفایل من👤',ctx=>{
     bot.telegram.sendMessage(ctx.chat.id,`اسم شما : ${name} \n ایدی شما : ${id} \n امتیاز شما : ${emtiaz} \n حساب شما : ${money} \n`)
   });
 
+
 //   action button for contact with admin
   bot.hears('تماس با مدیر📞',ctx=>{
        bot.telegram.sendMessage(ctx.chat.id,'ایدی ادمین : \n https://t.me/Arman3831')
@@ -48,6 +50,15 @@ bot.hears('پروفایل من👤',ctx=>{
         bot.telegram.sendMessage(ctx.chat.id,'register')
         
   });
+  bot.hears('ثبت تبلیغ🖋️',ctx=>{
+    bot.telegram.sendMessage(ctx.chat.id,'Ad')
+  });
+  bot.hears('امار تبلیغات🔥',ctx=>{
+    bot.telegram.sendMessage(ctx.chat.id,'Amar ad')
+  })
+  bot.hears('فوروارد همگانی🧷',ctx=>{
+    bot.telegram.sendMessage(ctx.chat.id,'forward to all')
+  })
 
 // adding member 
     bot.on('message',ctx=>{
